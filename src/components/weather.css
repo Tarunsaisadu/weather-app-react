@@ -1,4 +1,78 @@
+.weatherbanner {
+  background-image: url("https://images.unsplash.com/photo-1496450681664-3df85efbd29f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  height: 450px;
+  border: 1px white solid;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
+.bannercontent {
+  display: flex;
+  justify-content: space-between;
+}
+.today_date {
+  margin-top: 120px;
+  margin-left: 28%;
+
+  margin-right: 0px;
+  font-size: large;
+  font-family: "Varela Round", sans-serif;
+  color: white;
+}
+
+.city_title {
+  margin-top: 15%;
+  margin-left: 40%;
+  padding: 10px 10px;
+  border: 3px rgb(230, 179, 179) solid;
+  border-radius: 15px;
+  font-family: "Varela Round", sans-serif;
+  color: white;
+}
+.searchbuton {
+  width: 100px;
+  height: 50px;
+  margin-top: 30px;
+  margin-right: 30px;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+  margin-right: 90px;
+}
+.weatherdetails {
+  max-width: 250px;
+  width: 210px;
+  height: 150px;
+  padding: 20px;
+  margin-left: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 4px 12px 9px rgba(159, 168, 168, 0.82);
+  box-shadow: 1px 4px 12px 9px rgba(190, 191, 192, 0.82);
+}
+.weathericons {
+  margin: 5px 5px;
+}
+.subtitle {
+  color: gray;
+  line-height: 2;
+  font-size: large;
+  margin-left: 20px;
+}
+.weathercontent {
+  font-size: 14px;
+  padding: 10px 10px;
+}
+/* 
 h1{
 font-family: 'Varela Round', sans-serif;
 color: white;
@@ -26,4 +100,4 @@ color: white;
 .info_weather{
   padding-left : 10px;
 
-}
+} */

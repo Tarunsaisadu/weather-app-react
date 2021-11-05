@@ -3,11 +3,14 @@ import React, { useEffect, useState } from "react";
 import Weather from "./components/Weather";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Search from "./components/Search";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import * as ReactBootStrap from "react-bootstrap";
+import { Spinner } from "react-bootstrap";
 function App() {
   const [lat, setLat] = useState([]);
   const [long, setLong] = useState([]);
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchWeather = async () => {
@@ -22,26 +25,31 @@ function App() {
       let response_json = await response.json();
       setData(response_json);
       console.log(response_json);
+      setLoading(true);
     };
     fetchWeather();
   }, [lat, long]);
 
   return (
-    <div className="App" >
-      <Router>
-        {typeof data.main != "undefined" ? (
-          <Route
-            exact
-            path="/"
-            render={(routerProps) => (
-              <Weather {...routerProps} weatherData={data} />
-            )}
-          />
-        ) : (
-          <div></div>
-        )}
-        <Route exact path="/search" component={Search} />
-      </Router>
+    <div className="App">
+      {loading ? (
+        <Router>
+          {typeof data.main != "undefined" ? (
+            <Route
+              exact
+              path="/"
+              render={(routerProps) => (
+                <Weather {...routerProps} weatherData={data} />
+              )}
+            />
+          ) : (
+            <div></div>
+          )}
+          <Route exact path="/search" component={Search} />
+        </Router>
+      ) : (
+        <ReactBootStrap.Spinner animation="border" />
+      )}
     </div>
   );
 }
