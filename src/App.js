@@ -6,6 +6,7 @@ import Search from "./components/Search";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as ReactBootStrap from "react-bootstrap";
 import { Spinner } from "react-bootstrap";
+import Loader from "./components/Loader";
 function App() {
   const [lat, setLat] = useState([]);
   const [long, setLong] = useState([]);
@@ -48,7 +49,7 @@ function App() {
           <Route exact path="/search" component={Search} />
         </Router>
       ) : (
-        <ReactBootStrap.Spinner animation="border" />
+        <Loader />
       )}
     </div>
   );
