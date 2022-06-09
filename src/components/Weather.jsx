@@ -13,16 +13,7 @@ const Weather = ({ weatherData, loading }) => {
           <h1 className="city_title">{weatherData.name}</h1>
           <h2 className="today_date"> {moment().format("LL")}</h2>
           <Link to="/Search">
-            <button className="searchbuton">
-              <lord-icon
-                className="city_icon"
-                src="https://cdn.lordicon.com/oudlegmg.json"
-                trigger="hover"
-                colors="primary:#000000,secondary:#000000"
-                stroke="58"
-                style={{ width: "50px", height: "50px" }}
-              ></lord-icon>
-            </button>
+            <button className="searchbuton">search by city</button>
           </Link>
         </div>
       </div>
